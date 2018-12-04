@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns = "http://www.springframework.org/schema/beans"
+   xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
+   xsi:schemaLocation = "http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+   
+   <bean id="empBean" class="com.spring.Employee">
+   <property name="id" value="343"></property>
+   <property name="name" value="Naveen"></property>
+   <property name="salary" value="75000"></property>
+  
+   <property name="mobile">
+   <list>
+   <ref bean="mobileBean1"></ref>
+   <ref bean="mobileBean2"></ref>
+   </list>
+   </property>
+   </bean>
+   
+   <bean id="mobileBean1" class="com.spring.Mobile">
+   <property name="brand" value="OnePlus"></property>
+   <property name="cost" value="40000"></property>
+   </bean>
+   
+   <bean id="mobileBean2" class="com.spring.Mobile">
+   <property name="brand" value="MI"></property>
+   <property name="cost" value="15000"></property>
+   </bean>
+   
+   </beans>

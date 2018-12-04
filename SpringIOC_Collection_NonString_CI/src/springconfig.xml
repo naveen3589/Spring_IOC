@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns = "http://www.springframework.org/schema/beans"
+   xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
+   xsi:schemaLocation = "http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+   
+   <bean id="empBean" class="com.spring.Employee">
+   <constructor-arg value="101"></constructor-arg>
+   <constructor-arg value="Naveen"></constructor-arg>
+   <constructor-arg value="65000"></constructor-arg>
+   <constructor-arg>
+   <list>
+   <ref bean="mobileBean1"></ref>
+   <ref bean="mobileBean2"></ref>
+   </list>
+   </constructor-arg>
+   </bean>
+   
+   <bean id="mobileBean1" class="com.spring.Mobile">
+   <constructor-arg value="OnePlus"></constructor-arg>
+   <constructor-arg value="50000"></constructor-arg>
+   </bean>
+   
+   <bean id="mobileBean2" class="com.spring.Mobile">
+   <constructor-arg value="MI"></constructor-arg>
+   <constructor-arg value="20000"></constructor-arg>
+   </bean>
+   
+   </beans>
