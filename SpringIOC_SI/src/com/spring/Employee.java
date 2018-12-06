@@ -5,6 +5,7 @@ public class Employee {
 	int id;
 	String name;
 	float salary;
+	
 	public int getId() {
 		return id;
 	}
@@ -28,5 +29,8 @@ public class Employee {
 		return "Employee [id=" + id + ", name=" + name + ", salary=" + salary + "]";
 	}
 	
-	
 }
+
+
+
+
